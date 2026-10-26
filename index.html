@@ -85,7 +85,7 @@
       position: relative;
       width: 100%;
       max-width: 420px;
-      min-height: 580px;
+      min-height: 610px;
     }
 
     .card-view {
@@ -93,12 +93,12 @@
       top: 0;
       left: 0;
       width: 100%;
-      min-height: 580px;
+      min-height: 610px;
       background: var(--card-bg);
       border: 1px solid var(--border-soft);
       border-radius: 20px;
       box-shadow: var(--shadow-card);
-      padding: 40px 28px 34px;
+      padding: 36px 26px 30px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -129,25 +129,31 @@
       font-size: 1.85rem;
       font-style: italic;
       color: var(--text-dark);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
-    .date-row {
+    /* Fecha Vertical Estilizada */
+    .date-vertical {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      font-family: 'Cinzel', serif;
-      font-size: 1.8rem;
-      letter-spacing: 2px;
-      color: var(--text-dark);
-      margin: 10px 0 14px;
+      margin: 8px 0 10px;
+      line-height: 1;
     }
 
-    .date-row span.sep {
+    .date-vertical .date-num {
+      font-family: 'Cinzel', serif;
+      font-size: 1.85rem;
+      letter-spacing: 2px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .date-vertical .date-dot {
       color: var(--accent-gold);
-      font-size: 1.1rem;
-      line-height: 1;
+      font-size: 0.9rem;
+      margin: 2px 0;
     }
 
     .names {
@@ -155,37 +161,36 @@
       font-size: 3.2rem;
       line-height: 1.15;
       color: var(--text-dark);
-      margin: 4px 0 14px;
+      margin: 2px 0 10px;
     }
 
     .intro-text {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-style: italic;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .venue-box {
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .venue-title {
-      font-size: 1.3rem;
+      font-size: 1.28rem;
       font-weight: 600;
       font-style: italic;
       color: var(--text-dark);
-      letter-spacing: 0.3px;
     }
 
     .venue-addr {
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       color: var(--text-muted);
-      margin: 3px 0 5px;
+      margin: 2px 0 4px;
     }
 
     .venue-time {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--accent-gold);
       letter-spacing: 1px;
@@ -193,8 +198,8 @@
     }
 
     .verse-container {
-      margin-top: 24px;
-      padding-top: 16px;
+      margin-top: 18px;
+      padding-top: 14px;
       border-top: 1px solid rgba(179, 155, 125, 0.3);
       text-align: center;
     }
@@ -203,7 +208,7 @@
       font-size: 1.15rem;
       font-style: italic;
       color: var(--text-dark);
-      line-height: 1.4;
+      line-height: 1.35;
       display: block;
     }
 
@@ -268,7 +273,7 @@
     .timer-val { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 600; color: var(--text-dark); }
     .timer-lbl { font-family: 'Montserrat', sans-serif; font-size: 0.6rem; text-transform: uppercase; color: var(--accent-gold); font-weight: 500; }
 
-    /* Botones */
+    /* Botones de acción */
     .actions-box {
       width: 100%;
       max-width: 420px;
@@ -316,12 +321,13 @@
       <div>
         <div class="title-script">¡Nos dijimos Sí!</div>
         
-        <div class="date-row">
-          <span>14</span>
-          <span class="sep">&bull;</span>
-          <span>11</span>
-          <span class="sep">&bull;</span>
-          <span>26</span>
+        <!-- Fecha Vertical -->
+        <div class="date-vertical">
+          <div class="date-num">14</div>
+          <div class="date-dot">&bull;</div>
+          <div class="date-num">11</div>
+          <div class="date-dot">&bull;</div>
+          <div class="date-num">26</div>
         </div>
 
         <div class="names">Angely &amp; Rafael</div>
@@ -414,17 +420,22 @@
       document.querySelectorAll('.nav-tab').forEach((b, i) => b.classList.toggle('active', i === index));
     }
 
-    // Fecha en formato estándar ISO compatible con todos los navegadores (14 Nov 2026, 7:00 PM AST UTC-4)
     const targetDate = new Date('2026-11-14T19:00:00-04:00').getTime();
     
     function updateCountdown() {
       const now = new Date().getTime();
       const diff = targetDate - now;
+
       if (diff > 0) {
-        document.getElementById('days').innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
-        document.getElementById('hours').innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-        document.getElementById('minutes').innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-        document.getElementById('seconds').innerText = String(Math.floor((diff % 1000) / 1000)).padStart(2, '0');
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
       } else {
         document.getElementById('days').innerText = '00';
         document.getElementById('hours').innerText = '00';
@@ -432,6 +443,7 @@
         document.getElementById('seconds').innerText = '00';
       }
     }
+
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
