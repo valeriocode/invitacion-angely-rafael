@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angely &amp; Rafael | Celebración de Compromiso</title>
   
+  <!-- Open Graph Meta Tags for WhatsApp and Social Previews -->
   <meta property="og:title" content="Angely &amp; Rafael — Celebración de Compromiso">
-  <meta property="og:description" content="Acompáñanos a celebrar nuestro compromiso el 14 de Noviembre de 2026.">
+  <meta property="og:description" content="¡Nos dijimos Sí! Acompáñanos a celebrar nuestro compromiso el 14 de Noviembre de 2026.">
   <meta property="og:type" content="website">
 
+  <!-- Typography: Alex Brush, Cinzel, Cormorant Garamond, Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <style>
@@ -19,132 +23,81 @@
       --bg-cream: #f4efea;
       --card-bg: #FAF7F2;
       --text-dark: #23201D;
-      --text-muted: #615a52;
+      --text-muted: #5e5750;
       --accent-gold: #b39b7d;
       --border-soft: rgba(179, 155, 125, 0.35);
-      --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+      --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.07), 0 4px 10px rgba(0, 0, 0, 0.03);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       background-color: var(--bg-cream);
-      background-image: radial-gradient(#dcd5c9 0.8px, transparent 0.8px);
-      background-size: 20px 20px;
+      background-image: radial-gradient(#dbd3c6 0.85px, transparent 0.85px);
+      background-size: 22px 22px;
       font-family: 'Cormorant Garamond', serif;
       color: var(--text-dark);
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       min-height: 100vh;
-      padding: 24px 16px 44px;
+      padding: 32px 18px 50px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .nav-container {
-      display: flex;
-      gap: 6px;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
-      padding: 5px;
-      border-radius: 30px;
-      border: 1px solid var(--border-soft);
-      margin-bottom: 20px;
-      max-width: 430px;
-      width: 100%;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .nav-container::-webkit-scrollbar { display: none; }
-
-    .nav-tab {
-      flex: 1;
-      min-width: fit-content;
-      background: transparent;
-      border: none;
-      padding: 9px 14px;
-      border-radius: 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.4px;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .nav-tab.active {
-      background: var(--text-dark);
-      color: #FFF;
-    }
-
-    .card-wrapper {
+    /* Contenedor principal de la tarjeta única */
+    .card-single {
       position: relative;
       width: 100%;
       max-width: 420px;
-      min-height: 610px;
-    }
-
-    .card-view {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      min-height: 610px;
       background: var(--card-bg);
       border: 1px solid var(--border-soft);
-      border-radius: 20px;
+      border-radius: 22px;
       box-shadow: var(--shadow-card);
-      padding: 36px 26px 30px;
+      padding: 42px 28px 36px;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px) scale(0.98);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .card-view.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0) scale(1);
-    }
-
-    .card-view::before {
+    /* Borde interior punteado de alta costura */
+    .card-single::before {
       content: "";
       position: absolute;
       inset: 12px;
       border: 1px dashed rgba(179, 155, 125, 0.5);
-      border-radius: 14px;
+      border-radius: 16px;
       pointer-events: none;
     }
 
     .title-script {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.85rem;
+      font-size: 1.95rem;
       font-style: italic;
       color: var(--text-dark);
-      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
     }
 
-    /* Fecha Vertical Estilizada */
+    /* Formato Vertical de Fecha */
     .date-vertical {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 8px 0 10px;
+      margin: 10px 0 12px;
       line-height: 1;
     }
 
     .date-vertical .date-num {
       font-family: 'Cinzel', serif;
-      font-size: 1.85rem;
+      font-size: 1.9rem;
       letter-spacing: 2px;
       color: var(--text-dark);
       font-weight: 500;
@@ -152,70 +105,75 @@
 
     .date-vertical .date-dot {
       color: var(--accent-gold);
-      font-size: 0.9rem;
-      margin: 2px 0;
+      font-size: 0.95rem;
+      margin: 3px 0;
     }
 
+    /* Nombres en Caligrafía Romántica */
     .names {
       font-family: 'Alex Brush', cursive;
-      font-size: 3.2rem;
+      font-size: 3.3rem;
       line-height: 1.15;
       color: var(--text-dark);
-      margin: 2px 0 10px;
+      margin: 2px 0 12px;
     }
 
-    .intro-text {
-      font-size: 1.12rem;
+    .intro-desc {
+      font-size: 1.15rem;
       font-style: italic;
       color: var(--text-muted);
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+      line-height: 1.35;
     }
 
-    .venue-box {
-      margin-top: 4px;
+    /* Detalles del Lugar */
+    .venue-section {
+      margin-top: 6px;
     }
 
-    .venue-title {
-      font-size: 1.28rem;
+    .venue-name {
+      font-size: 1.32rem;
       font-weight: 600;
       font-style: italic;
       color: var(--text-dark);
+      letter-spacing: 0.3px;
     }
 
-    .venue-addr {
-      font-size: 0.96rem;
+    .venue-address {
+      font-size: 0.98rem;
       color: var(--text-muted);
-      margin: 2px 0 4px;
+      margin: 3px 0 6px;
     }
 
-    .venue-time {
+    .venue-hour {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.92rem;
       font-weight: 600;
       color: var(--accent-gold);
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
-    .verse-container {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(179, 155, 125, 0.3);
+    /* Versículo y Referencia Bíblica */
+    .verse-wrapper {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(179, 155, 125, 0.35);
       text-align: center;
     }
 
-    .verse-text {
-      font-size: 1.15rem;
+    .verse-quote {
+      font-size: 1.18rem;
       font-style: italic;
       color: var(--text-dark);
       line-height: 1.35;
       display: block;
     }
 
-    .verse-ref {
+    .verse-citation {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.72rem;
-      letter-spacing: 2px;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--accent-gold);
       margin-top: 6px;
@@ -223,27 +181,17 @@
       display: block;
     }
 
-    /* Menú */
-    .menu-heading { font-family: 'Alex Brush', cursive; font-size: 3.4rem; margin-bottom: 4px; }
-    .menu-section { font-size: 1.85rem; font-style: italic; margin: 14px 0 6px; color: var(--text-dark); }
-    .menu-section::after { content: ""; display: block; width: 32px; height: 1px; background: var(--accent-gold); margin: 3px auto 0; }
-    .menu-item { font-size: 1.12rem; font-style: italic; color: var(--text-muted); margin: 3px 0; }
-
-    /* Mensaje & Gratitud */
-    .monogram { font-family: 'Alex Brush', cursive; font-size: 3.5rem; color: var(--accent-gold); line-height: 1; }
-    .monogram-sub { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 20px; }
-
-    /* Countdown */
+    /* Caja de Cuenta Regresiva */
     .countdown-box {
       width: 100%;
       max-width: 420px;
-      margin-top: 20px;
-      background: rgba(255, 255, 255, 0.85);
+      margin-top: 22px;
+      background: rgba(255, 255, 255, 0.88);
       border: 1px solid var(--border-soft);
-      border-radius: 16px;
-      padding: 16px;
+      border-radius: 18px;
+      padding: 16px 14px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
     }
 
     .countdown-title {
@@ -254,33 +202,54 @@
       color: var(--text-muted);
       margin-bottom: 12px;
       font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
     .timer-grid {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .timer-col {
-      background: #FFF;
+      background: #FFFFFF;
       border: 1px solid rgba(179, 155, 125, 0.3);
-      border-radius: 10px;
-      padding: 8px 10px;
-      min-width: 68px;
+      border-radius: 12px;
+      padding: 9px 8px;
+      flex: 1;
+      max-width: 82px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
     }
 
-    .timer-val { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 600; color: var(--text-dark); }
-    .timer-lbl { font-family: 'Montserrat', sans-serif; font-size: 0.6rem; text-transform: uppercase; color: var(--accent-gold); font-weight: 500; }
+    .timer-val {
+      font-family: 'Cinzel', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.1;
+    }
 
-    /* Botones de acción */
+    .timer-lbl {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      margin-top: 3px;
+    }
+
+    /* Botones de Acción */
     .actions-box {
       width: 100%;
       max-width: 420px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 14px;
+      gap: 11px;
+      margin-top: 16px;
     }
 
     .btn {
@@ -288,140 +257,115 @@
       align-items: center;
       justify-content: center;
       gap: 9px;
-      padding: 13px 20px;
-      border-radius: 25px;
+      padding: 14px 22px;
+      border-radius: 30px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       text-decoration: none;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-dark {
+      background: #23201D;
+      color: #FFFFFF;
+      border: 1px solid #23201D;
+    }
+
+    .btn-dark:hover {
+      background: #393530;
+      border-color: #393530;
+      transform: translateY(-1px);
+    }
+
+    .btn-light {
+      background: #FFFFFF;
+      color: var(--text-dark);
       border: 1px solid var(--accent-gold);
     }
 
-    .btn-dark { background: #23201D; color: #FFF; border-color: #23201D; }
-    .btn-light { background: #FFF; color: var(--text-dark); }
+    .btn-light:hover {
+      background: #fbf9f6;
+      transform: translateY(-1px);
+    }
   </style>
 </head>
 <body>
 
-  <nav class="nav-container">
-    <button class="nav-tab active" onclick="showTab(0)"><i class="fa-regular fa-envelope"></i> Invitación</button>
-    <button class="nav-tab" onclick="showTab(1)"><i class="fa-solid fa-utensils"></i> Menú</button>
-    <button class="nav-tab" onclick="showTab(2)"><i class="fa-regular fa-face-smile"></i> Mensaje</button>
-    <button class="nav-tab" onclick="showTab(3)"><i class="fa-regular fa-star"></i> Gratitud</button>
-  </nav>
-
-  <div class="card-wrapper">
-
-    <!-- Tarjeta 1: Invitación -->
-    <div class="card-view active" id="view-0">
-      <div>
-        <div class="title-script">¡Nos dijimos Sí!</div>
-        
-        <!-- Fecha Vertical -->
-        <div class="date-vertical">
-          <div class="date-num">14</div>
-          <div class="date-dot">&bull;</div>
-          <div class="date-num">11</div>
-          <div class="date-dot">&bull;</div>
-          <div class="date-num">26</div>
-        </div>
-
-        <div class="names">Angely &amp; Rafael</div>
-        <div class="intro-text">¡Con mucha ilusión celebramos nuestro compromiso!</div>
-
-        <div class="venue-box">
-          <div class="venue-title">Restaurante Loretta Café Bistro</div>
-          <div class="venue-addr">Calle Víctor Garrido Puello, no. 16, Santo Domingo</div>
-          <div class="venue-time">7:00 PM</div>
-        </div>
+  <!-- Tarjeta Única Minimalista de Invitación -->
+  <div class="card-single">
+    <div>
+      <div class="title-script">¡Nos dijimos Sí!</div>
+      
+      <!-- Fecha en diseño vertical limpio con puntos dorados -->
+      <div class="date-vertical">
+        <div class="date-num">14</div>
+        <div class="date-dot">&bull;</div>
+        <div class="date-num">11</div>
+        <div class="date-dot">&bull;</div>
+        <div class="date-num">26</div>
       </div>
 
-      <div class="verse-container">
-        <span class="verse-text">&ldquo;Dos son mejor que uno.&rdquo;</span>
-        <span class="verse-ref">Eclesiastés 4:9</span>
+      <div class="names">Angely &amp; Rafael</div>
+      <div class="intro-desc">¡Con mucha ilusión celebramos nuestro compromiso!</div>
+
+      <div class="venue-section">
+        <div class="venue-name">Restaurante Loretta Café Bistro</div>
+        <div class="venue-address">Calle Víctor Garrido Puello, no. 16, Santo Domingo</div>
+        <div class="venue-hour">7:00 PM</div>
       </div>
     </div>
 
-    <!-- Tarjeta 2: Menú -->
-    <div class="card-view" id="view-1">
-      <div>
-        <div class="menu-heading">Menú</div>
-        <div class="menu-section">Entradas</div>
-        <div class="menu-item">Hummus Turco</div>
-        <div class="menu-item">Dip de Espinacas</div>
-        <div class="menu-item">Berenjena al Horno</div>
-        <div class="menu-item">Burrata Marinara</div>
-
-        <div class="menu-section">Platos Principales</div>
-        <div class="menu-item">Pechuga Rellena de Goat Cheese</div>
-        <div class="menu-item">Fusión Salmón Plate</div>
-        <div class="menu-item">Churrasco Angus al Grill</div>
-        <div class="menu-item">Goat Cheese Tamarindo Salad</div>
-      </div>
-      <div class="title-script" style="font-size: 1.9rem; margin-top: 15px;">¡Buen provecho!</div>
+    <!-- Cita bíblica centrada con línea de división sutil -->
+    <div class="verse-wrapper">
+      <span class="verse-quote">&ldquo;Dos son mejor que uno.&rdquo;</span>
+      <span class="verse-citation">ECLESIASTÉS 4:9</span>
     </div>
-
-    <!-- Tarjeta 3: Mensaje -->
-    <div class="card-view" id="view-2">
-      <div>
-        <div class="title-script" style="font-size: 1.95rem;">¡Gracias por venir a celebrar con nosotros!</div>
-        <div class="intro-text" style="margin: 24px 0 14px;">Por acompañarnos, brindar, comer rico y ser testigos oficiales de que...</div>
-        <div class="title-script" style="font-size: 2.1rem; font-weight: 600;">¡Sí dijimos que sí!</div>
-        <div class="intro-text" style="margin: 20px 0;">Nos llevamos una noche llena de amor, risas y recuerdos...<br><br><strong>Aunque en la próxima, ¡invitan ustedes!</strong></div>
-      </div>
-      <div>
-        <div style="font-size: 1.15rem; font-style: italic;">Con amor,</div>
-        <div class="names" style="margin-top: 0;">Angely &amp; Rafael</div>
-      </div>
-    </div>
-
-    <!-- Tarjeta 4: Gratitud -->
-    <div class="card-view" id="view-3">
-      <div>
-        <div class="monogram">A&amp;R</div>
-        <div class="monogram-sub">14 &bull; 11 &bull; 26</div>
-        <div class="title-script" style="font-size: 2.15rem; line-height: 1.35; margin: 26px 0 18px;">
-          ¡Gracias por compartir esta noche inolvidable con nosotros!
-        </div>
-        <div class="intro-text" style="font-size: 1.25rem; margin-top: 18px;">Con gratitud eterna,</div>
-        <div class="names" style="font-size: 3.1rem; margin-top: 6px;">Angely &amp; Rafael</div>
-      </div>
-      <div style="font-style: italic; color: var(--accent-gold); font-size: 1.05rem;">&mdash; Santo Domingo, R.D. &mdash;</div>
-    </div>
-
   </div>
 
+  <!-- Contador regresivo dinámico -->
   <div class="countdown-box">
-    <div class="countdown-title"><i class="fa-regular fa-clock"></i> Cuenta regresiva para el gran día</div>
+    <div class="countdown-title">
+      <i class="fa-regular fa-clock"></i> Cuenta regresiva para el gran día
+    </div>
     <div class="timer-grid">
-      <div class="timer-col"><div class="timer-val" id="days">00</div><div class="timer-lbl">Días</div></div>
-      <div class="timer-col"><div class="timer-val" id="hours">00</div><div class="timer-lbl">Horas</div></div>
-      <div class="timer-col"><div class="timer-val" id="minutes">00</div><div class="timer-lbl">Minutos</div></div>
-      <div class="timer-col"><div class="timer-val" id="seconds">00</div><div class="timer-lbl">Segundos</div></div>
+      <div class="timer-col">
+        <div class="timer-val" id="days">00</div>
+        <div class="timer-lbl">Días</div>
+      </div>
+      <div class="timer-col">
+        <div class="timer-val" id="hours">00</div>
+        <div class="timer-lbl">Horas</div>
+      </div>
+      <div class="timer-col">
+        <div class="timer-val" id="minutes">00</div>
+        <div class="timer-lbl">Minutos</div>
+      </div>
+      <div class="timer-col">
+        <div class="timer-val" id="seconds">00</div>
+        <div class="timer-lbl">Segundos</div>
+      </div>
     </div>
   </div>
 
+  <!-- Botones de Acción (RSVP y Google Maps) -->
   <div class="actions-box">
-    <a href="https://api.whatsapp.com/send?phone=18293426215&text=%C2%A1Hola!%20Confirmo%20con%20mucha%20alegr%C3%ADa%20mi%20asistencia%20al%20compromiso%20de%20Angely%20y%20Rafael." target="_blank" class="btn btn-dark">
+    <a href="https://api.whatsapp.com/send?phone=18293426215&text=%C2%A1Hola!%20Confirmo%20con%20mucha%20alegr%C3%ADa%20mi%20asistencia%20al%20compromiso%20de%20Angely%20y%20Rafael." target="_blank" rel="noopener noreferrer" class="btn btn-dark">
       <i class="fa-brands fa-whatsapp"></i> Confirmar Asistencia (RSVP)
     </a>
-    <a href="https://maps.google.com/?q=Loretta+Cafe+Bistro+Santo+Domingo" target="_blank" class="btn btn-light">
+    <a href="https://maps.google.com/?q=Loretta+Cafe+Bistro+Santo+Domingo" target="_blank" rel="noopener noreferrer" class="btn btn-light">
       <i class="fa-solid fa-location-dot"></i> Ver Ubicación en Maps
     </a>
   </div>
 
   <script>
-    function showTab(index) {
-      document.querySelectorAll('.card-view').forEach((c, i) => c.classList.toggle('active', i === index));
-      document.querySelectorAll('.nav-tab').forEach((b, i) => b.classList.toggle('active', i === index));
-    }
-
+    // Fecha objetivo exacta: 14 de Noviembre de 2026 a las 7:00 PM (hora de República Dominicana UTC-4)
     const targetDate = new Date('2026-11-14T19:00:00-04:00').getTime();
-    
+
     function updateCountdown() {
       const now = new Date().getTime();
       const diff = targetDate - now;
@@ -444,6 +388,7 @@
       }
     }
 
+    // Actualización por segundo y llamada inmediata inicial
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
