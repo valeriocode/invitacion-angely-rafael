@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angely &amp; Rafael | Celebraci&oacute;n de Compromiso</title>
+  <title>Angely &amp; Rafael | Celebracion de Compromiso</title>
   
-  <meta property="og:title" content="Angely &amp; Rafael &mdash; &iexcl;Nos dijimos S&iacute;!">
-  <meta property="og:description" content="Acomp&aacute;&ntilde;anos a celebrar nuestro compromiso el 14 de Noviembre de 2026.">
+  <meta property="og:title" content="Angely &amp; Rafael - Compromiso">
+  <meta property="og:description" content="Acompananos a celebrar nuestro compromiso el 14 de Noviembre de 2026.">
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -221,8 +221,8 @@
 <body>
 
   <nav class="nav-container">
-    <button class="nav-tab active" onclick="showTab(0)"><i class="fa-regular fa-envelope"></i> Invitaci&oacute;n</button>
-    <button class="nav-tab" onclick="showTab(1)"><i class="fa-solid fa-utensils"></i> Men&uacute;</button>
+    <button class="nav-tab active" onclick="showTab(0)"><i class="fa-regular fa-envelope"></i> Invitacion</button>
+    <button class="nav-tab" onclick="showTab(1)"><i class="fa-solid fa-utensils"></i> Menu</button>
     <button class="nav-tab" onclick="showTab(2)"><i class="fa-regular fa-face-smile"></i> Mensaje</button>
     <button class="nav-tab" onclick="showTab(3)"><i class="fa-regular fa-star"></i> Gratitud</button>
   </nav>
@@ -240,19 +240,19 @@
           26
         </div>
         <div class="names">Angely &amp; Rafael</div>
-        <div class="body-desc">&iexcl;Con mucha ilusi&oacute;n celebramos nuestro compromiso!</div>
-        <div class="venue-title">Restaurante Loretta Caf&eacute; Bistro</div>
-        <div class="venue-addr">Calle V&iacute;ctor Garrido Puello, no. 16, Santo Domingo</div>
+        <div class="body-desc">&iexcl;Con mucha ilusion celebramos nuestro compromiso!</div>
+        <div class="venue-title">Restaurante Loretta Cafe Bistro</div>
+        <div class="venue-addr">Calle Victor Garrido Puello, no. 16, Santo Domingo</div>
         <div class="venue-time">7:00 pm</div>
       </div>
       <div class="body-desc" style="font-size: 1.1rem; margin-top: 15px;">
-        &ldquo;Dos son mejor que uno.&rdquo;<br><small style="font-size: 0.85rem;">ECLESIAST&Eacute;S 4:9</small>
+        &ldquo;Dos son mejor que uno.&rdquo;<br><small style="font-size: 0.85rem;">ECLESIASTES 4:9</small>
       </div>
     </div>
 
     <div class="card-view" id="view-1">
       <div>
-        <div class="menu-heading">Men&uacute;</div>
+        <div class="menu-heading">Menu</div>
         <div class="menu-section">Entradas</div>
         <div class="menu-item">Hummus Turco</div>
         <div class="menu-item">Dip de Espinacas</div>
@@ -261,7 +261,7 @@
 
         <div class="menu-section">Platos Principales</div>
         <div class="menu-item">Pechuga Rellena de Goat Cheese</div>
-        <div class="menu-item">Fusi&oacute;n Salm&oacute;n Plate</div>
+        <div class="menu-item">Fusion Salmon Plate</div>
         <div class="menu-item">Churrasco Angus al Grill</div>
         <div class="menu-item">Goat Cheese Tamarindo Salad</div>
       </div>
@@ -271,9 +271,9 @@
     <div class="card-view" id="view-2">
       <div>
         <div class="title-script" style="font-size: 2rem;">&iexcl;Gracias por venir a celebrar con nosotros!</div>
-        <div class="body-desc" style="margin: 25px 0 15px;">Por acompa&ntilde;arnos, brindar, comer rico y ser testigos oficiales de que...</div>
-        <div class="title-script" style="font-size: 2.2rem; font-weight: 600;">&iexcl;Si dijimos que s&iacute;!</div>
-        <div class="body-desc" style="margin: 20px 0;">Nos llevamos una noche llena de amor, risas y recuerdos...<br><br><strong>Aunque en la pr&oacute;xima, &iexcl;Invitan ustedes!</strong></div>
+        <div class="body-desc" style="margin: 25px 0 15px;">Por acompanarnos, brindar, comer rico y ser testigos oficiales de que...</div>
+        <div class="title-script" style="font-size: 2.2rem; font-weight: 600;">&iexcl;Si dijimos que si!</div>
+        <div class="body-desc" style="margin: 20px 0;">Nos llevamos una noche llena de amor, risas y recuerdos...<br><br><strong>Aunque en la proxima, &iexcl;Invitan ustedes!</strong></div>
       </div>
       <div>
         <div style="font-size: 1.2rem; font-style: italic;">Con amor,</div>
@@ -297,9 +297,9 @@
   </div>
 
   <div class="countdown-box">
-    <div class="countdown-title"><i class="fa-regular fa-clock"></i> Cuenta regresiva para el gran d&iacute;a</div>
+    <div class="countdown-title"><i class="fa-regular fa-clock"></i> Cuenta regresiva para el gran dia</div>
     <div class="timer-grid">
-      <div class="timer-col"><div class="timer-val" id="days">00</div><div class="timer-lbl">D&iacute;as</div></div>
+      <div class="timer-col"><div class="timer-val" id="days">00</div><div class="timer-lbl">Dias</div></div>
       <div class="timer-col"><div class="timer-val" id="hours">00</div><div class="timer-lbl">Horas</div></div>
       <div class="timer-col"><div class="timer-val" id="minutes">00</div><div class="timer-lbl">Minutos</div></div>
       <div class="timer-col"><div class="timer-val" id="seconds">00</div><div class="timer-lbl">Segundos</div></div>
@@ -311,7 +311,7 @@
       <i class="fa-brands fa-whatsapp"></i> Confirmar Asistencia (RSVP)
     </a>
     <a href="https://maps.google.com/?q=Loretta+Cafe+Bistro+Santo+Domingo" target="_blank" class="btn btn-light">
-      <i class="fa-solid fa-location-dot"></i> Ver Ubicaci&oacute;n en Maps
+      <i class="fa-solid fa-location-dot"></i> Ver Ubicacion en Maps
     </a>
   </div>
 
